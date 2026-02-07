@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUKUM MARITIME 5.0 - Transformasi Hukum Laut & Pelayaran</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Popup/Modal -->
+    <div id="popup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div id="popup-content"></div>
+        </div>
+    </div>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                    </svg>
+                </div>
+                <h1>HUKUM MARITIME 5.0</h1>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="active">Beranda</a></li>
+                <li><a href="hukum-internasional.html">Hukum Internasional</a></li>
+                <li><a href="hukum-nasional.html">Hukum Nasional</a></li>
+                <li><a href="isu-maritime-5.html">Isu Maritime 5.0</a></li>
+                <li><a href="tokoh-pakar.html">Tokoh & Pakar</a></li>
+                <li><a href="referensi.html">Referensi</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>HUKUM MARITIME 5.0</h1>
+                <h2>Transformasi Hukum Laut & Pelayaran di Era Digital dan Industri 5.0</h2>
+                <p>Platform edukasi komprehensif tentang perkembangan hukum maritim dalam menghadapi tantangan revolusi industri 5.0</p>
+                
+                <div class="badge-section">
+                    <div class="badge badge-internasional" onclick="showSourceInfo('internasional')">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <path d="M8 12h8M12 8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span>Sumber Internasional</span>
+                    </div>
+                    <div class="badge badge-nasional" onclick="showSourceInfo('nasional')">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Sumber Nasional</span>
+                    </div>
+                    <div class="badge badge-akademis" onclick="showSourceInfo('akademis')">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 14v8M6 18h12M12 2a10 10 0 1010 10 10 10 0 00-10-10z" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Sumber Akademis</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="intro">
+            <div class="container">
+                <h2>Konsep Maritime 5.0</h2>
+                <p>Maritime 5.0 merupakan evolusi dari konsep maritim tradisional yang mengintegrasikan teknologi digital, kecerdasan buatan, Internet of Things (IoT), dan big data analytics ke dalam seluruh aspek industri kelautan dan pelayaran. Konsep ini tidak hanya merevolusi operasional kapal dan pelabuhan, tetapi juga menuntut transformasi fundamental dalam kerangka hukum yang mengaturnya.</p>
+                
+                <div class="concept-grid">
+                    <div class="concept-card card-internasional" onclick="showPopup('digital')">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Digitalisasi</h3>
+                        <p>Transformasi proses administrasi dan operasional maritim melalui teknologi digital</p>
+                        <span class="source-tag tag-internasional">IMO Guidelines</span>
+                    </div>
+                    <div class="concept-card card-otonomi" onclick="showPopup('otonomi')">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <path d="M12 8v8M8 12h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3>Otonomi</h3>
+                        <p>Pengembangan kapal otonom dan sistem navigasi cerdas</p>
+                        <span class="source-tag tag-internasional">MSC Guidelines</span>
+                    </div>
+                    <div class="concept-card card-lingkungan" onclick="showPopup('lingkungan')">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M22 4L12 14.01l-3-3" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Keberlanjutan</h3>
+                        <p>Fokus pada perlindungan lingkungan laut dan praktik pelayaran berkelanjutan</p>
+                        <span class="source-tag tag-internasional">MARPOL</span>
+                    </div>
+                    <div class="concept-card card-konektivitas" onclick="showPopup('konektivitas')">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M7 7V2h5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Konektivitas</h3>
+                        <p>Integrasi sistem komunikasi dan data antar kapal, pelabuhan, dan otoritas maritim</p>
+                        <span class="source-tag tag-internasional">ITU Standards</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2>Fitur Website</h2>
+                <div class="features-grid">
+                    <div class="feature-item" onclick="showPopup('fitur1')">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M14 2v6h6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 13H8M16 17H8M10 9H8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Analisis Hukum Internasional</h3>
+                        <p>Studi mendalam tentang UNCLOS 1982, konvensi IMO, dan peran lembaga hukum internasional</p>
+                        <span class="source-tag tag-internasional">UNCLOS, IMO</span>
+                    </div>
+                    <div class="feature-item" onclick="showPopup('fitur2')">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Kerangka Hukum Nasional</h3>
+                        <p>Eksplorasi implementasi hukum maritim Indonesia termasuk Deklarasi Djuanda dan UU Pelayaran</p>
+                        <span class="source-tag tag-nasional">UU No.17/2008</span>
+                    </div>
+                    <div class="feature-item" onclick="showPopup('fitur3')">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Tantangan Maritime 5.0</h3>
+                        <p>Analisis isu hukum terkini seperti cybersecurity, autonomous ships, dan sengketa maritim</p>
+                        <span class="source-tag tag-akademis">Jurnal Internasional</span>
+                    </div>
+                    <div class="feature-item" onclick="showPopup('fitur4')">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Profil Pakar Maritim</h3>
+                        <p>Informasi tentang kontribusi tokoh dan pakar hukum maritim nasional dan internasional</p>
+                        <span class="source-tag tag-akademis">Publikasi Akademis</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="source-legend">
+            <div class="container">
+                <h3>Legenda Sumber Hukum</h3>
+                <div class="legend-grid">
+                    <div class="legend-item">
+                        <span class="legend-color legend-internasional"></span>
+                        <div>
+                            <strong>Sumber Internasional</strong>
+                            <p>Konvensi PBB, IMO, ITLOS, ICJ</p>
+                        </div>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color legend-nasional"></span>
+                        <div>
+                            <strong>Sumber Nasional</strong>
+                            <p>UU, PP, Perpres Indonesia</p>
+                        </div>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color legend-akademis"></span>
+                        <div>
+                            <strong>Sumber Akademis</strong>
+                            <p>Buku, Jurnal, Penelitian</p>
+                        </div>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color legend-yurisprudensi"></span>
+                        <div>
+                            <strong>Yurisprudensi</strong>
+                            <p>Putusan Pengadilan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>HUKUM MARITIME 5.0</h4>
+                    <p>Platform edukasi komprehensif untuk mahasiswa, dosen, pelaut profesional, dan peneliti hukum maritim.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Modul Pembelajaran</h4>
+                    <ul>
+                        <li><a href="hukum-internasional.html">Hukum Internasional</a></li>
+                        <li><a href="hukum-nasional.html">Hukum Nasional</a></li>
+                        <li><a href="isu-maritime-5.html">Isu Maritime 5.0</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Referensi</h4>
+                    <ul>
+                        <li><a href="tokoh-pakar.html">Tokoh & Pakar</a></li>
+                        <li><a href="referensi.html">Daftar Referensi</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 HUKUM MARITIME 5.0. Platform Edukasi Hukum Maritim. Semua hak cipta dilindungi.</p>
+                <p>Website ini bertujuan untuk edukasi akademis dan tidak menggantikan konsultasi hukum profesional.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
